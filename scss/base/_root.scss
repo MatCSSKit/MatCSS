@@ -45,6 +45,10 @@
   }
   --#{$prefix}font-family: #{$font-family};
 
+
+  @each $width, $value in $border-widths {
+    --#{$prefix}border-#{$width}: #{$value};
+  }
   --#{$prefix}border-radius: #{$border-radius};
   --#{$prefix}border-radius-sm: #{$border-radius-sm};
   --#{$prefix}border-radius-lg: #{$border-radius-lg};

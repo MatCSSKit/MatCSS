@@ -21,7 +21,6 @@ Buttons are an important part of any application. They are used for various purp
 <button className="btn green">Green</button>
 <button className="btn teal">Teal</button>
 <button className="btn cyan">Cyan</button>
-<button className="btn green">Green</button>
 <button className="btn blue">Blue</button>
 
 ```html title=index.html
@@ -34,6 +33,5 @@ Buttons are an important part of any application. They are used for various purp
 <button class="btn green">Green</button>
 <button class="btn teal">Teal</button>
 <button class="btn cyan">Cyan</button>
-<button class="btn green">Green</button>
 <button class="btn blue">Blue</button>
 ```

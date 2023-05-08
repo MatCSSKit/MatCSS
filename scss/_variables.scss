@@ -2,7 +2,6 @@ $global-prefix: '' !default;
 
 $prefix: 'mat-' !default;
 
-/* Colors */
 $default-color: #ededed;
 $highlight-color: #099be1;
 
@@ -342,7 +341,35 @@ $font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, "Segoe UI", "Robot
 $font-size: 1rem;
 $root-font-size: null !default;
 
-/* Border Radius */
+
+$breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+) !default;
+
+$spacing: 1rem !default;
+$spacers: (
+    0: 0,
+    1: $spacing * .25,
+    2: $spacing * .5,
+    3: $spacing,
+    4: $spacing * 1.5,
+    5: $spacing * 3,
+);
+
+/* Border */
+$border-widths: (
+    0: 0,
+    1: 1px,
+    2: 2px,
+    3: 3px,
+    4: 4px,
+    5: 5px
+) !default;
 $border-radius: 0.25rem !default;
 $border-radius-sm: 0.15rem !default;
 $border-radius-lg: 0.45rem !default;
@@ -353,7 +380,7 @@ $border-radius-pill: 50rem !default;
 /* Buttons */
 $btn-y-padding: 0.8rem;
 $btn-x-padding: 2rem;
-$btn-border-radius: 0.25rem;
+$btn-border-radius: $border-radius;
 $btn-border-color: currentColor;
 $btn-text-size: 1rem;
 $btn-text-weight: 600;
@@ -372,3 +399,5 @@ $navbar-dark-text: $cloud-1;
 $navbar-dark-border: $cloud-7;
 $navbar-dark-link-hover: $dark-4;
 $navbar-dark-link-active: $dark-3;
+
+$enable-important-utilities: false !default;

@@ -33,6 +33,7 @@
     box-shadow: 0 var(--#{$prefix}btn-shadow-hover-size) 0
       var(--#{$prefix}btn-border);
     background-color: var(--#{$prefix}btn-hover-bg);
+    color: var(--#{$prefix}btn-color);
   }
   &:active {
     transform: translateY(

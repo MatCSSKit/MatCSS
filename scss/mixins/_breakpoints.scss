@@ -1,0 +1,30 @@
+@function breakpoint-min($name, $breakpoints: $breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+@function breakpoint-infix($name, $breakpoint: $breakpoints) {
+  @return if(breakpoint-min($name, $breakpoint) == null, "", "-#{$name}");
+}
+
+@mixin media-query-up($name, $breakpoints: $breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin media-query-down($name, $breakpoints: $breakpoints) {
+  $max: map-get($breakpoints, $name);
+  @if $max > 0 {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
