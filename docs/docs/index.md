@@ -13,9 +13,9 @@ MatCSS is a work in progress. This page is written for the future, and IS not ac
 
 MatCSS is a CSS framework built with the idea of smooth, pretty and simple components. It is designed to be easy to learn and to customize.
 
-(explain that it was inspired by Bootstrap and Flatify)
+MatCSS is inspired by [Bootstrap](http://getbootstrap.com/) and [Flatify](https://flatifycss.com/) (Go check them out, they're awesome!). Bootstrap has awesome utilities class that makes it easy to create a responsive website, we wanted to achieve a similar result with MatCSS, so we built MatCSS using Bootstrap's utilities & grid API! So if you are familiar with Bootstrap's grid system, you will feel right at home with MatCSS. Flatify had a unique style, inspired on Duolingo's website, that we really liked. We created components with similar styling and *vibe* to Flatify's, but with our own __twist__.
 
-MatCSS is inspired by [Bootstrap](http://getbootstrap.com/) and [Flatify](https://flatifycss.com/) (Go check them out, they're awesome!). Bootstrap has awesome utilities class that makes it easy to create a responsive website, we wanted to achieve a similar result with MatCSS, so we based our grid system on Bootstrap's! So if you are familiar with Bootstrap's grid system, you will feel right at home with MatCSS. Flatify had a unique style, inspired on Duolingo's website, that we really liked. We created components with similar styling and *vibe* to Flatify's, but with our own __twist__.
+So once again, thanks to Bootstrap, you guys did great at making CSS more responsive, and thanks to Flatify, you guys did great at making CSS more pretty. We hope to achieve the same results with MatCSS!
 
 ## Components
 

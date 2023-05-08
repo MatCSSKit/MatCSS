@@ -11,7 +11,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://matcss.netlify.app',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -31,11 +31,6 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-  stylesheets: [
-    {
-      href:'https://cdn.jsdelivr.net/gh/x404Dev/MatCSS@main/dist/css/mat.css'
-    }
-  ],
 
   presets: [
     [

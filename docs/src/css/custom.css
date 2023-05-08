@@ -5,6 +5,10 @@
  */
 
 /* You can override the default Infima variables here. */
+
+@import "https://cdn.jsdelivr.net/gh/x404Dev/MatCSS@main/dist/css/mat.css";
+
+
 :root {
   --ifm-color-primary: #1e9efa;
   --ifm-color-primary-dark: #29784c;
@@ -38,6 +42,16 @@
   --ifm-footer-background-color: #1a2630;
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .btn {
+  --mat-btn-border: white;
+  --mat-btn-bg: transparent;
+  color: white;
+}
+
+.btn {
+  margin: 0 0.1rem 0.6rem;
 }
 
 html[data-theme='dark'] {
