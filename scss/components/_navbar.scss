@@ -1,0 +1,49 @@
+.#{$global-prefix}navbar {
+  --#{$prefix}navbar-bg: #{$navbar-bg};
+  --#{$prefix}navbar-text: #{$navbar-text};
+  --#{$prefix}navbar-border: #{$navbar-border};
+  --#{$prefix}navbar-link-hover: #{$navbar-link-hover};
+  --#{$prefix}navbar-link-active: #{$navbar-link-active};
+
+  background-color: var(--#{$prefix}navbar-bg);
+  border-bottom: solid 3px var(--#{$prefix}navbar-border);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 4.3em;
+  padding: 0 1em;
+  color: var(--#{$prefix}navbar-text);
+  transition: all 0.3s ease-in-out;
+  &.dark {
+    --#{$prefix}navbar-bg: #{$navbar-dark-bg};
+    --#{$prefix}navbar-text: #{$navbar-dark-text};
+    --#{$prefix}navbar-border: #{$navbar-dark-border};
+    --#{$prefix}navbar-link-hover: #{$navbar-dark-link-hover};
+    --#{$prefix}navbar-link-active: #{$navbar-dark-link-active};
+  }
+  .links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    .link {
+      margin: 0 0.2rem;
+      padding: 0.7rem 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      color: var(--#{$prefix}navbar-text);
+      & a {
+        text-decoration: none;
+        font-weight: bold;
+        color: inherit;
+      }
+      &:hover {
+        color: var(--#{$prefix}navbar-link-hover);
+      }
+      &.active {
+        color: var(--#{$prefix}navbar-link-active);
+      }
+    }
+  }
+}

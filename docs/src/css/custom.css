@@ -1,0 +1,79 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #1e9efa;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-menu-link-padding-horizontal: 1.5em;
+  --ifm-menu-link-padding-vertical: 0.6em;
+
+  --ifm-footer-background-color: transparent;
+
+  --border: solid 2px var(--ifm-color-emphasis-300);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #1790ee;
+  --ifm-color-primary-dark: #1082db;
+  --ifm-color-primary-darker: #0f7bcf;
+  --ifm-color-primary-darkest: #0c65aa;
+  --ifm-color-primary-light: #2f9cf0;
+  --ifm-color-primary-lighter: #3ba1f1;
+  --ifm-color-primary-lightest: #60b3f3;
+  --ifm-background-color: #1a2630;
+  --ifm-navbar-background-color: #1a2630;
+
+  --ifm-footer-background-color: #1a2630;
+
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme='dark'] {
+  --ifm-background-color: #1a2630;
+}
+
+.footer--dark {
+  --ifm-footer-background-color: #1a2630;
+}
+
+.footer {
+  border-top: var(--border);
+}
+
+.theme-doc-sidebar-container {
+  border-right-color: var(--ifm-color-emphasis-300) !important;
+}
+
+.navbar {
+  border-bottom: var(--border);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 4.3em;
+  padding: 0 1em;
+}
+
+.pagination-nav__link {
+  border-width: 2px;
+  border-radius: 15px;
+}
+
+.menu__list .menu__list {
+  border-left: var(--border);
+  border-bottom: var(--border);
+  border-bottom-color: transparent;
+  border-radius: 0 0 0 20px;
+  margin-left: var(--ifm-menu-link-padding-horizontal);
+}

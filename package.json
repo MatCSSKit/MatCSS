@@ -1,0 +1,36 @@
+{
+  "name": "matcss",
+  "version": "0.9.0",
+  "description": "A Modern Flat CSS Framework",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "css": "npm-run-all css-build css-minify css-prefix",
+    "css-build": "sass scss/:dist/css/  --style expanded --source-map --embed-sources",
+    "css-lint": "",
+    "css-minify": "cleancss --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/matcss.min.css dist/css/matcss.css",
+    "css-prefix": "postcss --config postcss.config.js --replace \"dist/css/*.css\" \"dist/css/*.min.css\"",
+    "watch": "npm-run-all --parallel watch-css",
+    "watch-css": "nodemon --watch scss/ --ext scss --exec \"npm-run-all css-build css-prefix\""
+  },
+  "files": [
+    "dist",
+    "src",
+    "gulpfile.js",
+    "package.json",
+    "README.md"
+  ],
+  "author": "x404",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "clean-css-cli": "^5.6.2",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^10.1.0",
+    "rfs": "^10.0.0",
+    "sass": "^1.62.1"
+  }
+}

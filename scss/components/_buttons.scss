@@ -1,0 +1,102 @@
+.btn {
+  --#{$prefix}btn-bg: #{$default-color};
+  --#{$prefix}btn-color: #{$text-color};
+  --#{$prefix}btn-border: #{$btn-border-color};
+  --#{$prefix}btn-hover-bg: var(--#{$prefix}btn-bg);
+  --#{$prefix}btn-radius: #{$btn-border-radius};
+  --#{$prefix}btn-y-padding: #{$btn-y-padding};
+  --#{$prefix}btn-x-padding: #{$btn-x-padding};
+  --#{$prefix}btn-text-size: #{$btn-text-size};
+  --#{$prefix}btn-text-weight: #{$btn-text-weight};
+  --#{$prefix}btn-shadow-size: #{$btn-shadow-size};
+  --#{$prefix}btn-shadow-hover-size: #{$btn-shadow-hover-size};
+  --#{$prefix}btn-shadow-active-size: #{$btn-shadow-active-size};
+
+  background-color: var(--#{$prefix}btn-bg);
+  border-radius: var(--#{$prefix}btn-radius);
+  padding: var(--#{$prefix}btn-y-padding) var(--#{$prefix}btn-x-padding);
+  color: var(--#{$prefix}btn-color);
+  box-shadow: 0 var(--#{$prefix}btn-shadow-size) 0 var(--#{$prefix}btn-border);
+  font-size: var(--#{$prefix}btn-text-size);
+  font-weight: var(--#{$prefix}btn-text-weight);
+  border: solid 2px var(--#{$prefix}btn-border);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 0.6em;
+  &:hover {
+    transform: translateY(
+      calc(
+        var(--#{$prefix}btn-shadow-size) -
+          var(--#{$prefix}btn-shadow-hover-size)
+      )
+    );
+    box-shadow: 0 var(--#{$prefix}btn-shadow-hover-size) 0
+      var(--#{$prefix}btn-border);
+    background-color: var(--#{$prefix}btn-hover-bg);
+  }
+  &:active {
+    transform: translateY(
+      calc(
+        var(--#{$prefix}btn-shadow-size) -
+          var(--#{$prefix}btn-shadow-active-size)
+      )
+    );
+    box-shadow: 0 var(--#{$prefix}btn-shadow-active-size) 0
+      var(--#{$prefix}btn-border);
+  }
+  &:focus {
+    outline: none;
+  }
+  &[disabled] {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: translateY(
+      calc(
+        var(--#{$prefix}btn-shadow-size) -
+          var(--#{$prefix}btn-shadow-active-size)
+      )
+    );
+    box-shadow: 0 var(--#{$prefix}btn-shadow-active-size) 0
+      var(--#{$prefix}btn-border);
+  }
+  &.accent {
+    --#{$prefix}btn-border: #{darken($default-color, 15%)};
+  }
+  &.flat {
+    box-shadow: none;
+    transform: translateY(0);
+    border-color: #{$btn-secondary-border};
+    background-color: transparent;
+    margin-bottom: 0.3rem;
+    &:hover:not([disabled]) {
+      border-color: lighten($text-color, 10%);
+      background-color: lighten(#000, 80%);
+    }
+    &:active:not([disabled]) {
+      border-color: darken($text-color, 10%);
+      background-color: lighten(#000, 60%);
+    }
+  }
+  /* Colors */
+  @each $name, $color in $colors {
+    &.#{$name} {
+      background-color: #{$color};
+    }
+    &.flat.#{$name} {
+      background-color: lighten($color, $amount: 16%);
+      border-color: darken($color, 5%);
+      &:hover {
+        background-color: lighten($color, 5%);
+        border-color: darken($color, 20%);
+      }
+      &:active {
+        background-color: darken($color, 5%);
+        border-color: darken($color, 30%);
+      }
+    }
+    &.accent.#{$name} {
+      /* get color equivalent from $shadow as border color */
+      --#{$prefix}btn-border: #{map-get($shadows, $name)};
+    }
+  }
+}

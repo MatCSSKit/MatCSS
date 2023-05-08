@@ -1,0 +1,24 @@
+:root {
+  @each $color, $value in $colors {
+    --#{$prefix}#{$color}: #{$value};
+  }
+  @each $color, $value in $indigos {
+    --#{$prefix}indigo-#{$color}: #{$value};
+  }
+  //TODO
+
+  @include rfs($font-size, --#{$prefix}body-font-size);
+  @if $root-font-size != null {
+    --#{$prefix}root-font-size: #{$root-font-size};
+  }
+  --#{$prefix}font-family: #{$font-family};
+
+  --#{$prefix}border-radius: #{$border-radius};
+  --#{$prefix}border-radius-sm: #{$border-radius-sm};
+  --#{$prefix}border-radius-lg: #{$border-radius-lg};
+  --#{$prefix}border-radius-xl: #{$border-radius-xl};
+  --#{$prefix}border-radius-xxl: #{$border-radius-xxl};
+  --#{$prefix}border-radius-pill: #{$border-radius-pill};
+  
+  
+}

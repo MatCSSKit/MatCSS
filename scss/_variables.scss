@@ -1,0 +1,374 @@
+$global-prefix: 'mat-' !default;
+
+$prefix: 'mat-' !default;
+
+/* Colors */
+$default-color: #ededed;
+$highlight-color: #099be1;
+
+$indigo: #5c7cfa !default;
+$purple: #e96aff !default;
+$pink: #ff77cb !default;
+$red: #ff4040 !default;
+$orange: #ff9800 !default;
+$yellow: #fde71f !default;
+$green: #91f122 !default;
+$teal: #00c1c1 !default;
+$cyan: #00c77e !default;
+$blue: #36bfff !default;
+$gray: #9e9e9e !default;
+$cloud: #f1f4f7 !default;
+$dark: #2e4051 !default;
+
+$indigo-1: tint($indigo, 80%) !default;
+$indigo-2: tint($indigo, 60%) !default;
+$indigo-3: tint($indigo, 40%) !default;
+$indigo-4: tint($indigo, 20%) !default;
+$indigo-5: $indigo !default;
+$indigo-6: shade($indigo, 20%) !default;
+$indigo-7: shade($indigo, 40%) !default;
+$indigo-8: shade($indigo, 60%) !default;
+$indigo-9: shade($indigo, 80%) !default;
+
+$purple-1: tint($purple, 80%) !default;
+$purple-2: tint($purple, 60%) !default;
+$purple-3: tint($purple, 40%) !default;
+$purple-4: tint($purple, 20%) !default;
+$purple-5: $purple !default;
+$purple-6: shade($purple, 20%) !default;
+$purple-7: shade($purple, 40%) !default;
+$purple-8: shade($purple, 60%) !default;
+$purple-9: shade($purple, 80%) !default;
+
+$pink-1: tint($pink, 80%) !default;
+$pink-2: tint($pink, 60%) !default;
+$pink-3: tint($pink, 40%) !default;
+$pink-4: tint($pink, 20%) !default;
+$pink-5: $pink !default;
+$pink-6: shade($pink, 20%) !default;
+$pink-7: shade($pink, 40%) !default;
+$pink-8: shade($pink, 60%) !default;
+$pink-9: shade($pink, 80%) !default;
+
+$red-1: tint($red, 80%) !default;
+$red-2: tint($red, 60%) !default;
+$red-3: tint($red, 40%) !default;
+$red-4: tint($red, 20%) !default;
+$red-5: $red !default;
+$red-6: shade($red, 20%) !default;
+$red-7: shade($red, 40%) !default;
+$red-8: shade($red, 60%) !default;
+$red-9: shade($red, 80%) !default;
+
+$orange-1: tint($orange, 80%) !default;
+$orange-2: tint($orange, 60%) !default;
+$orange-3: tint($orange, 40%) !default;
+$orange-4: tint($orange, 20%) !default;
+$orange-5: $orange !default;
+$orange-6: shade($orange, 20%) !default;
+$orange-7: shade($orange, 40%) !default;
+$orange-8: shade($orange, 60%) !default;
+$orange-9: shade($orange, 80%) !default;
+
+$yellow-1: tint($yellow, 80%) !default;
+$yellow-2: tint($yellow, 60%) !default;
+$yellow-3: tint($yellow, 40%) !default;
+$yellow-4: tint($yellow, 20%) !default;
+$yellow-5: $yellow !default;
+$yellow-6: shade($yellow, 20%) !default;
+$yellow-7: shade($yellow, 40%) !default;
+$yellow-8: shade($yellow, 60%) !default;
+$yellow-9: shade($yellow, 80%) !default;
+
+$green-1: tint($green, 80%) !default;
+$green-2: tint($green, 60%) !default;
+$green-3: tint($green, 40%) !default;
+$green-4: tint($green, 20%) !default;
+$green-5: $green !default;
+$green-6: shade($green, 20%) !default;
+$green-7: shade($green, 40%) !default;
+$green-8: shade($green, 60%) !default;
+$green-9: shade($green, 80%) !default;
+
+$teal-1: tint($teal, 80%) !default;
+$teal-2: tint($teal, 60%) !default;
+$teal-3: tint($teal, 40%) !default;
+$teal-4: tint($teal, 20%) !default;
+$teal-5: $teal !default;
+$teal-6: shade($teal, 20%) !default;
+$teal-7: shade($teal, 40%) !default;
+$teal-8: shade($teal, 60%) !default;
+$teal-9: shade($teal, 80%) !default;
+
+$cyan-1: tint($cyan, 80%) !default;
+$cyan-2: tint($cyan, 60%) !default;
+$cyan-3: tint($cyan, 40%) !default;
+$cyan-4: tint($cyan, 20%) !default;
+$cyan-5: $cyan !default;
+$cyan-6: shade($cyan, 20%) !default;
+$cyan-7: shade($cyan, 40%) !default;
+$cyan-8: shade($cyan, 60%) !default;
+$cyan-9: shade($cyan, 80%) !default;
+
+$blue-1: tint($blue, 80%) !default;
+$blue-2: tint($blue, 60%) !default;
+$blue-3: tint($blue, 40%) !default;
+$blue-4: tint($blue, 20%) !default;
+$blue-5: $blue !default;
+$blue-6: shade($blue, 20%) !default;
+$blue-7: shade($blue, 40%) !default;
+$blue-8: shade($blue, 60%) !default;
+$blue-9: shade($blue, 80%) !default;
+
+$gray-1: tint($gray, 80%) !default;
+$gray-2: tint($gray, 60%) !default;
+$gray-3: tint($gray, 40%) !default;
+$gray-4: tint($gray, 20%) !default;
+$gray-5: $gray !default;
+$gray-6: shade($gray, 20%) !default;
+$gray-7: shade($gray, 40%) !default;
+$gray-8: shade($gray, 60%) !default;
+$gray-9: shade($gray, 80%) !default;
+
+$cloud-1: tint($cloud, 25%) !default;
+$cloud-2: tint($cloud, 15%) !default;
+$cloud-3: tint($cloud, 10%) !default;
+$cloud-4: tint($cloud, 5%) !default;
+$cloud-5: $cloud !default;
+$cloud-6: shade($cloud, 5%) !default;
+$cloud-7: shade($cloud, 10%) !default;
+$cloud-8: shade($cloud, 15%) !default;
+$cloud-9: shade($cloud, 25%) !default;
+
+$dark-1: tint($dark, 25%) !default;
+$dark-2: tint($dark, 15%) !default;
+$dark-3: tint($dark, 10%) !default;
+$dark-4: tint($dark, 5%) !default;
+$dark-5: $dark !default;
+$dark-6: shade($dark, 5%) !default;
+$dark-7: shade($dark, 10%) !default;
+$dark-8: shade($dark, 15%) !default;
+$dark-9: shade($dark, 25%) !default;
+
+$indigos: (
+    "1": $indigo-1,
+    "2": $indigo-2,
+    "3": $indigo-3,
+    "4": $indigo-4,
+    "5": $indigo-5,
+    "6": $indigo-6,
+    "7": $indigo-7,
+    "8": $indigo-8,
+    "9": $indigo-9
+) !default;
+
+$purples: (
+    "1": $purple-1,
+    "2": $purple-2,
+    "3": $purple-3,
+    "4": $purple-4,
+    "5": $purple-5,
+    "6": $purple-6,
+    "7": $purple-7,
+    "8": $purple-8,
+    "9": $purple-9
+) !default;
+
+$pinks: (
+    "1": $pink-1,
+    "2": $pink-2,
+    "3": $pink-3,
+    "4": $pink-4,
+    "5": $pink-5,
+    "6": $pink-6,
+    "7": $pink-7,
+    "8": $pink-8,
+    "9": $pink-9
+) !default;
+
+$reds: (
+    "1": $red-1,
+    "2": $red-2,
+    "3": $red-3,
+    "4": $red-4,
+    "5": $red-5,
+    "6": $red-6,
+    "7": $red-7,
+    "8": $red-8,
+    "9": $red-9
+) !default;
+
+$oranges: (
+    "1": $orange-1,
+    "2": $orange-2,
+    "3": $orange-3,
+    "4": $orange-4,
+    "5": $orange-5,
+    "6": $orange-6,
+    "7": $orange-7,
+    "8": $orange-8,
+    "9": $orange-9
+) !default;
+
+$yellows: (
+    "1": $yellow-1,
+    "2": $yellow-2,
+    "3": $yellow-3,
+    "4": $yellow-4,
+    "5": $yellow-5,
+    "6": $yellow-6,
+    "7": $yellow-7,
+    "8": $yellow-8,
+    "9": $yellow-9
+) !default;
+
+$greens: (
+    "1": $green-1,
+    "2": $green-2,
+    "3": $green-3,
+    "4": $green-4,
+    "5": $green-5,
+    "6": $green-6,
+    "7": $green-7,
+    "8": $green-8,
+    "9": $green-9
+) !default;
+
+$teals: (
+    "1": $teal-1,
+    "2": $teal-2,
+    "3": $teal-3,
+    "4": $teal-4,
+    "5": $teal-5,
+    "6": $teal-6,
+    "7": $teal-7,
+    "8": $teal-8,
+    "9": $teal-9
+) !default;
+
+$cyan: (
+    "1": $cyan-1,
+    "2": $cyan-2,
+    "3": $cyan-3,
+    "4": $cyan-4,
+    "5": $cyan-5,
+    "6": $cyan-6,
+    "7": $cyan-7,
+    "8": $cyan-8,
+    "9": $cyan-9
+) !default;
+
+$blues: (
+    "1": $blue-1,
+    "2": $blue-2,
+    "3": $blue-3,
+    "4": $blue-4,
+    "5": $blue-5,
+    "6": $blue-6,
+    "7": $blue-7,
+    "8": $blue-8,
+    "9": $blue-9
+) !default;
+
+$grays: (
+    "1": $gray-1,
+    "2": $gray-2,
+    "3": $gray-3,
+    "4": $gray-4,
+    "5": $gray-5,
+    "6": $gray-6,
+    "7": $gray-7,
+    "8": $gray-8,
+    "9": $gray-9
+) !default;
+
+$clouds: (
+    "1": $cloud-1,
+    "2": $cloud-2,
+    "3": $cloud-3,
+    "4": $cloud-4,
+    "5": $cloud-5,
+    "6": $cloud-6,
+    "7": $cloud-7,
+    "8": $cloud-8,
+    "9": $cloud-9
+) !default;
+
+$colors: (
+    'indigo': $indigo,
+    'purple': $purple,
+    'pink': $pink,
+    'red': $red,
+    'orange': $orange,
+    'yellow': $yellow,
+    'green': $green,
+    'teal': $teal,
+    'cyan': $cyan,
+    'blue': $blue,
+    'gray': $gray
+) !default;
+
+$shadows: (
+    'indigo': $indigo-6,
+    'purple': $purple-6,
+    'pink': $pink-6,
+    'red': $red-6,
+    'orange': $orange-6,
+    'yellow': $yellow-6,
+    'green': $green-6,
+    'teal': $teal-6,
+    'cyan': $cyan-6,
+    'blue': $blue-6,
+    'gray': $gray-6
+) !default;
+
+$highlight: (
+    'indigo': $indigo-1,
+    'purple': $purple-1,
+    'pink': $pink-1,
+    'red': $red-1,
+    'orange': $orange-1,
+    'yellow': $yellow-1,
+    'green': $green-1,
+    'teal': $teal-1,
+    'cyan': $cyan-1,
+    'blue': $blue-1,
+    'gray': $gray-1
+) !default;
+
+/* Text */
+$text-color: #0f172a;
+$font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, "Segoe UI", "Roboto", "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-size: 1rem;
+$root-font-size: null !default;
+
+/* Border Radius */
+$border-radius: 0.25rem !default;
+$border-radius-sm: 0.15rem !default;
+$border-radius-lg: 0.45rem !default;
+$border-radius-xl: 0.75rem !default;
+$border-radius-xxl: 1rem !default;
+$border-radius-pill: 50rem !default;
+
+/* Buttons */
+$btn-y-padding: 0.8rem;
+$btn-x-padding: 2rem;
+$btn-border-radius: 0.25rem;
+$btn-border-color: currentColor;
+$btn-text-size: 1rem;
+$btn-text-weight: 600;
+$btn-shadow-size: 0.35em;
+$btn-shadow-hover-size: 0.2em;
+$btn-shadow-active-size: 0em;
+$btn-secondary-border: #c3c6d1;
+
+$navbar-bg: #fff;
+$navbar-text: $text-color;
+$navbar-border: $cloud-7;
+$navbar-link-hover: $blue-5;
+$navbar-link-active: $blue-5;
+$navbar-dark-bg: $dark-5;
+$navbar-dark-text: $cloud-1;
+$navbar-dark-border: $cloud-7;
+$navbar-dark-link-hover: $dark-4;
+$navbar-dark-link-active: $dark-3;
