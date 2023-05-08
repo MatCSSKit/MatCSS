@@ -11,7 +11,7 @@ env:
   NODE: 18
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   css:
@@ -34,3 +34,11 @@ jobs:
 
       - name: Run CSS
         run: npm run css
+
+      - name: Commit and push changes to dist
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "github-actions-bot@example.com"
+          git add dist/*
+          git commit -m "Update dist directory after CSS build" || echo "No changes to commit"
+          git push
