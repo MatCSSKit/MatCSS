@@ -326,7 +326,7 @@ button {
   --mat-btn-border: #7e7e7e;
 }
 
-.mat-navbar {
+.navbar {
   --mat-navbar-bg: #fff;
   --mat-navbar-text: #0f172a;
   --mat-navbar-border: #d9dcde;
@@ -342,20 +342,20 @@ button {
   color: var(--mat-navbar-text);
   transition: all 0.3s ease-in-out;
 }
-.mat-navbar.dark {
+.navbar.dark {
   --mat-navbar-bg: #2e4051;
   --mat-navbar-text: #f5f7f9;
   --mat-navbar-border: #d9dcde;
   --mat-navbar-link-hover: #384a5a;
   --mat-navbar-link-active: #435362;
 }
-.mat-navbar .links {
+.navbar .links {
   list-style: none;
   display: flex;
   align-items: center;
   white-space: nowrap;
 }
-.mat-navbar .links .link {
+.navbar .links .link {
   margin: 0 0.2rem;
   padding: 0.7rem 1rem;
   border-radius: 0.5rem;
@@ -363,15 +363,15 @@ button {
   transition: all 0.15s ease;
   color: var(--mat-navbar-text);
 }
-.mat-navbar .links .link a {
+.navbar .links .link a {
   text-decoration: none;
   font-weight: bold;
   color: inherit;
 }
-.mat-navbar .links .link:hover {
+.navbar .links .link:hover {
   color: var(--mat-navbar-link-hover);
 }
-.mat-navbar .links .link.active {
+.navbar .links .link.active {
   color: var(--mat-navbar-link-active);
 }
 

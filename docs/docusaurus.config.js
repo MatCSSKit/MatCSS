@@ -31,6 +31,11 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+  stylesheets: [
+    {
+      href:'https://cdn.jsdelivr.net/gh/x404Dev/MatCSS@main/dist/css/mat.css'
+    }
+  ],
 
   presets: [
     [
