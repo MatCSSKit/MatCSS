@@ -21,7 +21,8 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v3
         with:
-          persist-credentials: false
+          persist-credentials: true
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -35,10 +36,10 @@ jobs:
       - name: Run CSS
         run: npm run css
 
-      - name: Commit and push changes to dist
-        run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "github-actions-bot@example.com"
-          git add dist/*
-          git commit -m "Update dist directory after CSS build" || echo "No changes to commit"
-          git push
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5.0.1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Update dist directory after CSS build"
+          title: "Update dist directory after CSS build"
+          body: "This PR updates the dist directory after a CSS build."
