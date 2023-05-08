@@ -1,10 +1,9 @@
-name: CSS
+name: CSS and Commit
 
 on:
   push:
     branches:
       - main
-  pull_request:
   workflow_dispatch:
 
 env:
@@ -14,7 +13,7 @@ permissions:
   contents: write
 
 jobs:
-  css:
+  css_and_commit:
     runs-on: ubuntu-latest
 
     steps:
@@ -36,10 +35,14 @@ jobs:
       - name: Run CSS
         run: npm run css
 
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v5.0.1
+      - name: Commit files
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -a -m "Add changes" || echo "No changes to commit"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Update dist directory after CSS build"
-          title: "Update dist directory after CSS build"
-          body: "This PR updates the dist directory after a CSS build."
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
