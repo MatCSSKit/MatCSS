@@ -33,4 +33,4 @@ MatCSS is designed to be responsive. Using a system similar to Bootstrap's, we h
 
 MatCSS is customizable in many ways! Using CSS variables, you can change the colors of the components, the spacing, the font, and much more! Everything you need to know about customization is at the bottom of every component's page! You may also customize the whole framework and customizing your _variables.scss file. Then you'll be able to build your very own version of MatCSS, with your name on it! 
 
-Now what do you say? Are you ready to start using MatCSS? [Let's get started!](/docs/getting-started/)
+Now what do you say? Are you ready to start using MatCSS? [Let's get started!](/docs/getting-started/installation)
