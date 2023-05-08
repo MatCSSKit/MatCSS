@@ -5,7 +5,39 @@
   @each $color, $value in $indigos {
     --#{$prefix}indigo-#{$color}: #{$value};
   }
-  //TODO
+  @each $color, $value in $purples {
+    --#{$prefix}purple-#{$color}: #{$value};
+  }
+  @each $color, $value in $pinks {
+    --#{$prefix}pink-#{$color}: #{$value};
+  }
+  @each $color, $value in $reds {
+    --#{$prefix}red-#{$color}: #{$value};
+  }
+  @each $color, $value in $oranges {
+    --#{$prefix}orange-#{$color}: #{$value};
+  }
+  @each $color, $value in $yellows {
+    --#{$prefix}yellow-#{$color}: #{$value};
+  }
+  @each $color, $value in $greens {
+    --#{$prefix}green-#{$color}: #{$value};
+  }
+  @each $color, $value in $teals {
+    --#{$prefix}teal-#{$color}: #{$value};
+  }
+  @each $color, $value in $cyans {
+    --#{$prefix}cyan-#{$color}: #{$value};
+  }
+  @each $color, $value in $blues {
+    --#{$prefix}blue-#{$color}: #{$value};
+  }
+  @each $color, $value in $grays {
+    --#{$prefix}gray-#{$color}: #{$value};
+  }
+  @each $color, $value in $clouds {
+    --#{$prefix}cloud-#{$color}: #{$value};
+  }
 
   @include rfs($font-size, --#{$prefix}body-font-size);
   @if $root-font-size != null {
