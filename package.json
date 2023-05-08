@@ -13,7 +13,7 @@
     "css-build": "sass scss/:dist/css/  --style expanded --source-map --embed-sources",
     "css-lint": "",
     "css-minify": "cleancss --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/mat.min.css dist/css/mat.css",
-    "css-prefix": "postcss --config postcss.config.js --replace \"dist/css/*.css\" \"dist/css/*.min.css\"",
+    "css-prefix": "postcss --config postcss.config.js --replace \"dist/css/*.css\" \"dist/css/*.min.css\" --use  autoprefixer",
     "watch": "npm-run-all --parallel watch-css",
     "watch-css": "nodemon --watch scss/ --ext scss --exec \"npm-run-all css-build css-prefix\""
   },
