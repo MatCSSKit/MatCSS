@@ -4,32 +4,29 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Modern & Minimalistic',
+    Svg: require('@site/static/img/feature1.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        MatCSS was designed to be modern, minimalistic, and easy to use. We deisn our components to be as simple as possible, while still being powerful and cusomizable.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Bootstrap Utilities',
+    Svg: require('@site/static/img/feature2.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        MatCSS was built using Bootstrap's Utilities API. So if you're familiar with Bootstrap, you'll feel right at home with MatCSS!
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Customizable',
+    Svg: require('@site/static/img/feature3.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        MatCSS is highly customizable. You can easily modify the looks with CSS variables, or even build your own MatCSS with your custom SCSS variables!
       </>
     ),
   },

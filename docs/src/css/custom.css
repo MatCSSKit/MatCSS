@@ -10,13 +10,13 @@
 
 
 :root {
-  --ifm-color-primary: #1e9efa;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #1790ee;
+  --ifm-color-primary-dark: #1082db;
+  --ifm-color-primary-darker: #0f7bcf;
+  --ifm-color-primary-darkest: #0c65aa;
+  --ifm-color-primary-light: #2f9cf0;
+  --ifm-color-primary-lighter: #3ba1f1;
+  --ifm-color-primary-lightest: #60b3f3;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-menu-link-padding-horizontal: 1.5em;
@@ -40,6 +40,7 @@
   --ifm-navbar-background-color: #1a2630;
 
   --ifm-footer-background-color: #1a2630;
+  --ifm-hero-background-color: #1a2630;
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
@@ -77,6 +78,10 @@ html[data-theme='dark'] {
   width: 100%;
   height: 4.3em;
   padding: 0 1em;
+}
+
+.navbar__logo {
+  height: 2.5rem;
 }
 
 .pagination-nav__link {
