@@ -1,6 +1,6 @@
 ---
 title: Grid System
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Grid System
@@ -15,8 +15,16 @@ Note: The grid system is not required to use MatCSS. You can use any grid system
 
 Instead of installing the whole Bootstrap library, you can install only the grid system. This will reduce the size of your website and make it faster to load.
 
-To install the grid system, you can use the following command:
+To install the grid system, you can add the following code to your HTML file:
 
-```bash
-npm install
+```html
+<link href="https://unpkg.com/bootstrap/dist/css/bootstrap-grid.min.css" rel="stylesheet">
 ```
+
+This will add the grid system to your website.
+
+## Usage
+
+For more information on how to use the grid system, you can visit the [Bootstrap documentation](https://getbootstrap.com/docs/5.0/layout/grid/).
+
+

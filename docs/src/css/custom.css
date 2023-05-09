@@ -6,7 +6,9 @@
 
 /* You can override the default Infima variables here. */
 
-@import "https://cdn.jsdelivr.net/gh/x404Dev/MatCSS@main/dist/css/mat.css";
+@import "https://cdn.jsdelivr.net/gh/x404Dev/MatCSS@latest/dist/css/mat.css";
+@import "https://unpkg.com/bootstrap/dist/css/bootstrap-grid.min.css";
+@import "https://unpkg.com/bootstrap/dist/css/bootstrap-utilities.min.css";
 
 :root {
   --ifm-color-primary: #1790ee;
