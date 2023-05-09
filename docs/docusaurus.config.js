@@ -89,6 +89,26 @@ const config = {
           },
         ],
       },
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'PVZR40UNGS',
+  
+        // Public API key: it is safe to commit it
+        apiKey: '27f3f79859440c71e45033a0ddaf3ee9',
+  
+        indexName: 'matcss',
+  
+        // Optional: see doc section below
+        contextualSearch: true,
+  
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        externalUrlRegex: 'external\\.com|domain\\.com',
+  
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
+  
+        //... other Algolia params
+      },
       versioning: {
         current: {
           label: "Canary",

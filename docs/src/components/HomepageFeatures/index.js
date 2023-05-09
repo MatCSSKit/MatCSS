@@ -13,11 +13,11 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Bootstrap Utilities',
+    title: 'Bootstrap RFS',
     Svg: require('@site/static/img/feature2.svg').default,
     description: (
       <>
-        MatCSS was built using Bootstrap's Utilities API. So if you're familiar with Bootstrap, you'll feel right at home with MatCSS!
+        MatCSS was built using Bootstrap's RFS, a powerful responsive font scaling utility made to make your website look great on all devices.
       </>
     ),
   },
