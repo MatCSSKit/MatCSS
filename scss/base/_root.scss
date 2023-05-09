@@ -38,6 +38,9 @@
   @each $color, $value in $clouds {
     --#{$prefix}cloud-#{$color}: #{$value};
   }
+  @each $color, $value in $darks {
+    --#{$prefix}dark-#{$color}: #{$value};
+  }
 
   @include rfs($font-size, --#{$prefix}body-font-size);
   @if $root-font-size != null {
