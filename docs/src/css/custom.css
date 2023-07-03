@@ -21,7 +21,7 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-menu-link-padding-horizontal: 1.5em;
-  --ifm-menu-link-padding-vertical: 0.6em;
+  --ifm-menu-link-padding-vertical: 0.7em;
 
   --ifm-footer-background-color: transparent;
 
@@ -46,6 +46,19 @@
   --mat-btn-color: #fff;
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.menu__link {
+  border-radius: 0.6rem;
+}
+
+.navbar__logo {
+  transition: transform 0.2s ease;
+}
+
+.navbar__logo:hover {
+  transform: scale(1.1) rotate(-5deg);
+
 }
 
 .header-github-link {
@@ -151,6 +164,11 @@ html[data-theme='dark'] {
 .table-of-contents.table-of-contents__left-border {
   border: var(--border);
   border-radius: 15px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.table-of-contents.table-of-contents__left-border:hover {
+  border-color: var(--ifm-color-primary);
 }
 
 /* Navbar */

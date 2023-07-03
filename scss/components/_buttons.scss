@@ -1,49 +1,27 @@
 .btn {
-  --#{$prefix}btn-bg: #{$default-color};
-  --#{$prefix}btn-color: #{$text-color};
-  --#{$prefix}btn-border: #{$btn-border-color};
-  --#{$prefix}btn-hover-bg: var(--#{$prefix}btn-bg);
-  --#{$prefix}btn-radius: #{$btn-border-radius};
-  --#{$prefix}btn-y-padding: #{$btn-y-padding};
-  --#{$prefix}btn-x-padding: #{$btn-x-padding};
-  --#{$prefix}btn-text-size: #{$btn-text-size};
-  --#{$prefix}btn-text-weight: #{$btn-text-weight};
-  --#{$prefix}btn-shadow-size: #{$btn-shadow-size};
-  --#{$prefix}btn-shadow-hover-size: #{$btn-shadow-hover-size};
-  --#{$prefix}btn-shadow-active-size: #{$btn-shadow-active-size};
-
-  background-color: var(--#{$prefix}btn-bg);
-  border-radius: var(--#{$prefix}btn-radius);
-  padding: var(--#{$prefix}btn-y-padding) var(--#{$prefix}btn-x-padding);
-  color: var(--#{$prefix}btn-color);
-  box-shadow: 0 var(--#{$prefix}btn-shadow-size) 0 var(--#{$prefix}btn-border);
-  font-size: var(--#{$prefix}btn-text-size);
-  font-weight: var(--#{$prefix}btn-text-weight);
-  border: solid 2px var(--#{$prefix}btn-border);
+  background-color: #{$default-color};
+  border-radius: #{$btn-border-radius};
+  padding: #{$btn-y-padding} #{$btn-x-padding};
+  color: #{$text-color};
+  box-shadow: 0 #{$btn-shadow-size} 0 #{$btn-border-color};
+  font-size: #{$btn-text-size};
+  font-weight: #{$btn-text-weight};
+  border: solid 2px #{$btn-border-color};
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   margin-bottom: 0.6em;
   &:hover {
     transform: translateY(
-      calc(
-        var(--#{$prefix}btn-shadow-size) -
-          var(--#{$prefix}btn-shadow-hover-size)
-      )
+      calc(#{$btn-shadow-size} - #{$btn-shadow-hover-size})
     );
-    box-shadow: 0 var(--#{$prefix}btn-shadow-hover-size) 0
-      var(--#{$prefix}btn-border);
-    background-color: var(--#{$prefix}btn-hover-bg);
-    color: var(--#{$prefix}btn-color);
+    box-shadow: 0 #{$btn-shadow-hover-size} 0 #{$btn-border-color};
+    color: #{$text-color};
   }
   &:active {
     transform: translateY(
-      calc(
-        var(--#{$prefix}btn-shadow-size) -
-          var(--#{$prefix}btn-shadow-active-size)
-      )
+      calc(#{$btn-shadow-size} - #{$btn-shadow-active-size})
     );
-    box-shadow: 0 var(--#{$prefix}btn-shadow-active-size) 0
-      var(--#{$prefix}btn-border);
+    box-shadow: 0 #{$btn-shadow-active-size} 0 #{$btn-border-color};
   }
   &:focus {
     outline: none;
@@ -52,16 +30,12 @@
     opacity: 0.65;
     cursor: not-allowed;
     transform: translateY(
-      calc(
-        var(--#{$prefix}btn-shadow-size) -
-          var(--#{$prefix}btn-shadow-active-size)
-      )
+      calc(#{$btn-shadow-size} - #{$btn-shadow-active-size})
     );
-    box-shadow: 0 var(--#{$prefix}btn-shadow-active-size) 0
-      var(--#{$prefix}btn-border);
+    box-shadow: 0 #{$btn-shadow-active-size} 0 #{$btn-border-color};
   }
   &.accent {
-    --#{$prefix}btn-border: #{darken($default-color, 15%)};
+    #{$btn-border-color}: #{darken($default-color, 15%)};
   }
   &.flat {
     box-shadow: none;
@@ -97,7 +71,7 @@
     }
     &.accent.#{$name} {
       /* get color equivalent from $shadow as border color */
-      --#{$prefix}btn-border: #{map-get($shadows, $name)};
+      #{$btn-border-color}: #{map-get($shadows, $name)};
     }
   }
 }

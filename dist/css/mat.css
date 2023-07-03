@@ -1,6 +1,7 @@
 /* Text */
 /* Border */
 /* Buttons */
+/* Inputs */
 /*
 * Credit to Bootstrap for this mixin, they are the real MVPs!
 */
@@ -171,40 +172,27 @@ button {
 }
 
 .btn {
-  --mat-btn-bg: #ededed;
-  --mat-btn-color: #0f172a;
-  --mat-btn-border: currentColor;
-  --mat-btn-hover-bg: var(--mat-btn-bg);
-  --mat-btn-radius: 0.25rem;
-  --mat-btn-y-padding: 0.8rem;
-  --mat-btn-x-padding: 2rem;
-  --mat-btn-text-size: 1rem;
-  --mat-btn-text-weight: 600;
-  --mat-btn-shadow-size: 0.35em;
-  --mat-btn-shadow-hover-size: 0.2em;
-  --mat-btn-shadow-active-size: 0em;
-  background-color: var(--mat-btn-bg);
-  border-radius: var(--mat-btn-radius);
-  padding: var(--mat-btn-y-padding) var(--mat-btn-x-padding);
-  color: var(--mat-btn-color);
-  box-shadow: 0 var(--mat-btn-shadow-size) 0 var(--mat-btn-border);
-  font-size: var(--mat-btn-text-size);
-  font-weight: var(--mat-btn-text-weight);
-  border: solid 2px var(--mat-btn-border);
+  background-color: #ededed;
+  border-radius: 0.25rem;
+  padding: 0.8rem 2rem;
+  color: #0f172a;
+  box-shadow: 0 0.35em 0 currentColor;
+  font-size: 1rem;
+  font-weight: 600;
+  border: solid 2px currentColor;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   margin-bottom: 0.6em;
   /* Colors */
 }
 .btn:hover {
-  transform: translateY(calc(var(--mat-btn-shadow-size) - var(--mat-btn-shadow-hover-size)));
-  box-shadow: 0 var(--mat-btn-shadow-hover-size) 0 var(--mat-btn-border);
-  background-color: var(--mat-btn-hover-bg);
-  color: var(--mat-btn-color);
+  transform: translateY(calc(0.35em - 0.2em));
+  box-shadow: 0 0.2em 0 currentColor;
+  color: #0f172a;
 }
 .btn:active {
-  transform: translateY(calc(var(--mat-btn-shadow-size) - var(--mat-btn-shadow-active-size)));
-  box-shadow: 0 var(--mat-btn-shadow-active-size) 0 var(--mat-btn-border);
+  transform: translateY(calc(0.35em - 0em));
+  box-shadow: 0 0em 0 currentColor;
 }
 .btn:focus {
   outline: none;
@@ -212,11 +200,11 @@ button {
 .btn[disabled] {
   opacity: 0.65;
   cursor: not-allowed;
-  transform: translateY(calc(var(--mat-btn-shadow-size) - var(--mat-btn-shadow-active-size)));
-  box-shadow: 0 var(--mat-btn-shadow-active-size) 0 var(--mat-btn-border);
+  transform: translateY(calc(0.35em - 0em));
+  box-shadow: 0 0em 0 currentColor;
 }
 .btn.accent {
-  --mat-btn-border: #c7c7c7;
+  currentColor: #c7c7c7;
 }
 .btn.flat {
   box-shadow: none;
@@ -250,7 +238,7 @@ button {
 }
 .btn.accent.indigo {
   /* get color equivalent from $shadow as border color */
-  --mat-btn-border: #4a63c8;
+  currentColor: #4a63c8;
 }
 .btn.purple {
   background-color: #e96aff;
@@ -269,7 +257,7 @@ button {
 }
 .btn.accent.purple {
   /* get color equivalent from $shadow as border color */
-  --mat-btn-border: #ba55cc;
+  currentColor: #ba55cc;
 }
 .btn.pink {
   background-color: #ff77cb;
@@ -288,7 +276,7 @@ button {
 }
 .btn.accent.pink {
   /* get color equivalent from $shadow as border color */
-  --mat-btn-border: #cc5fa2;
+  currentColor: #cc5fa2;
 }
 .btn.red {
   background-color: #ff4040;
@@ -307,7 +295,7 @@ button {
 }
 .btn.accent.red {
   /* get color equivalent from $shadow as border color */
-  --mat-btn-border: #cc3333;
+  currentColor: #cc3333;
 }
 .btn.orange {
   background-color: #ff9800;
@@ -326,7 +314,7 @@ button {
 }
 .btn.accent.orange {
   /* get color equivalent from $shadow as border color */
-  --mat-btn-border: #cc7a00;
+  currentColor: #cc7a00;
 }
 .btn.yellow {
   background-color: #fde71f;
@@ -345,7 +333,7 @@ button {
 }
 .btn.accent.yellow {
   /* get color equivalent from $shadow as border color */
-  --mat-btn-border: #cab919;
+  currentColor: #cab919;
 }
 .btn.green {
   background-color: #91f122;
@@ -364,7 +352,7 @@ button {
 }
 .btn.accent.green {
   /* get color equivalent from $shadow as border color */
-  --mat-btn-border: #74c11b;
+  currentColor: #74c11b;
 }
 .btn.teal {
   background-color: #00c1c1;
@@ -383,7 +371,7 @@ button {
 }
 .btn.accent.teal {
   /* get color equivalent from $shadow as border color */
-  --mat-btn-border: #009a9a;
+  currentColor: #009a9a;
 }
 .btn.cyan {
   background-color: #00c77e;
@@ -402,7 +390,7 @@ button {
 }
 .btn.accent.cyan {
   /* get color equivalent from $shadow as border color */
-  --mat-btn-border: #009f65;
+  currentColor: #009f65;
 }
 .btn.blue {
   background-color: #36bfff;
@@ -421,7 +409,7 @@ button {
 }
 .btn.accent.blue {
   /* get color equivalent from $shadow as border color */
-  --mat-btn-border: #2b99cc;
+  currentColor: #2b99cc;
 }
 .btn.gray {
   background-color: #9e9e9e;
@@ -440,7 +428,17 @@ button {
 }
 .btn.accent.gray {
   /* get color equivalent from $shadow as border color */
-  --mat-btn-border: #7e7e7e;
+  currentColor: #7e7e7e;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  height: 3em;
+  padding: 0em 1em;
+  border-radius: 1em;
+  font-size: 1.1em;
+  border: solid 2px #cdcfd2;
 }
 
 .navbar {
