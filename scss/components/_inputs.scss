@@ -5,5 +5,12 @@
     padding: 0em 1em;
     border-radius: 1em;
     font-size: 1.1em;
+    color: #{$input-color};
     border: solid 2px #{$input-border-color};
+    background-color: #{$input-bg-color};
+    transition: all 0.1s ease-in-out;
+    &:focus {
+      outline: none;
+      border: 3px solid  #{$input-border-color-focus};
+    }
 }
