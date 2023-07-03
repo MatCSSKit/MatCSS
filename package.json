@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "npm-run-all css",
-    "css": "npm-run-all css-build css-minify css-minify-utils css-prefix",
+    "css": "npm-run-all css-build css-minify css-prefix",
     "css-build": "sass scss/:dist/css/ --style expanded --source-map --embed-sources",
     "css-lint": "",
     "css-minify": "cleancss --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/mat.min.css dist/css/mat.css",
