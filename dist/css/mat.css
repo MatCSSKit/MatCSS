@@ -2,9 +2,6 @@
 /* Border */
 /* Buttons */
 /* Inputs */
-/*
-* Credit to Bootstrap for this mixin, they are the real MVPs!
-*/
 :root {
   --mat-indigo: #5c7cfa;
   --mat-purple: #e96aff;
@@ -438,7 +435,14 @@ button {
   padding: 0em 1em;
   border-radius: 1em;
   font-size: 1.1em;
+  color: #0f172a;
   border: solid 2px #cdcfd2;
+  background-color: #f2f5f7;
+  transition: all 0.1s ease-in-out;
+}
+.input:focus {
+  outline: none;
+  border: 3px solid #36bfff;
 }
 
 .navbar {
@@ -488,34 +492,6 @@ button {
 }
 .navbar .links .link.active {
   color: var(--mat-navbar-link-active);
-}
-
-.borderless {
-  border: 0;
-}
-
-.rounded {
-  border-radius: var(--mat-border-radius);
-}
-
-.rounded-sm {
-  border-radius: var(--mat-border-radius-sm);
-}
-
-.rounded-lg {
-  border-radius: var(--mat-border-radius-lg);
-}
-
-.rounded-xl {
-  border-radius: var(--mat-border-radius-xl);
-}
-
-.rounded-xxl {
-  border-radius: var(--mat-border-radius-xxl);
-}
-
-.rounded-pill {
-  border-radius: var(--mat-border-radius-pill);
 }
 
 /*# sourceMappingURL=mat.css.map */
