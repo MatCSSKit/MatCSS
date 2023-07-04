@@ -18,11 +18,15 @@
     "watch-css": "nodemon --watch scss/ --ext scss --exec \"npm-run-all css-build css-prefix\""
   },
   "files": [
-    "dist",
-    "src",
-    "gulpfile.js",
+    "dist/",
+    "scss/",
+    "js/",
     "package.json",
-    "README.md"
+    "README.md",
+    "LICENSE",
+    "CONTRIBUTING.md",
+    "CODE_OF_CONDUCT.md",
+    "tests/"
   ],
   "author": "x404",
   "license": "ISC",
