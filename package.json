@@ -1,6 +1,6 @@
 {
   "name": "matcss",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "A Modern Flat CSS Framework",
   "main": "index.js",
   "directories": {
