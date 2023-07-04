@@ -30,6 +30,6 @@ workflows:
       - publish:
           filters:
             branches:
-              ignore: /.*/
+              only: main
             tags:
               only: /v[0-9]+(\.[0-9]+)*/
