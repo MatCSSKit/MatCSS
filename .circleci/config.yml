@@ -8,7 +8,6 @@ jobs:
   publish:
     docker:
       - image: node:lts
-
     steps:
       - checkout
 
