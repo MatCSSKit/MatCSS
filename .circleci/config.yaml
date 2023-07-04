@@ -1,0 +1,43 @@
+orbs:
+  node: circleci/node@5.1.0
+version: 2.1
+
+# Basic workflow: Checkout, build, then deploy if npm version was changed
+
+jobs:
+  build:
+    docker:
+      - image: node:lts
+
+    steps:
+      - checkout
+
+      - run:
+          name: Install Dependencies
+          command: npm ci
+
+      - run:
+          name: Build CSS
+          command: npm run css
+  publish:
+    docker:
+      - image: <docker-image-name-tag>
+    steps:
+      - run:
+          name: Publish to NPM
+          command: |
+            npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+            npm publish
+
+workflows:
+  build:
+    jobs:
+      - build
+      - publish:
+          requires:
+            - build
+          filters:
+            branches:
+              only: main
+            tags:
+              only: /^v[0-9]+(\.[0-9]+)*/
