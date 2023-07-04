@@ -29,5 +29,7 @@ workflows:
     jobs:
       - publish:
           filters:
+            branches:
+              ignore: /.*/
             tags:
               only: /^v.*/
