@@ -5,7 +5,7 @@ version: 2.1
 # Basic workflow: Checkout, build, then deploy if npm version was changed
 
 jobs:
-  build_and_publish:
+  publish:
     docker:
       - image: node:lts
 
@@ -28,7 +28,7 @@ jobs:
 workflows:
   tagged-build:
     jobs:
-      - build_and_publish:
+      - publish:
           filters:
             tags:
-              only: /^v.*/
+              only: /v[0-9]+(\.[0-9]+)*/
