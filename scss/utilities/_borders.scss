@@ -1,0 +1,18 @@
+.rounded {
+    @include border-radius(var(--#{$prefix}border-radius));
+}
+.rounded-sm {
+    @include border-radius(var(--#{$prefix}border-radius-sm));
+}
+.rounded-lg {
+    @include border-radius(var(--#{$prefix}border-radius-lg));
+}
+.rounded-xl {
+    @include border-radius(var(--#{$prefix}border-radius-xl));
+}
+.rounded-xxl {
+    @include border-radius(var(--#{$prefix}border-radius-xxl));
+}
+.rounded-pill {
+    @include border-radius(var(--#{$prefix}border-radius-pill));
+}

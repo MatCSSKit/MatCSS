@@ -1,12 +1,14 @@
 .btn {
+  --#{$prefix}btn-border: #{$btn-border-color};
+
   background-color: #{$default-color};
   border-radius: #{$btn-border-radius};
   padding: #{$btn-y-padding} #{$btn-x-padding};
   color: #{$text-color};
-  box-shadow: 0 #{$btn-shadow-size} 0 #{$btn-border-color};
+  box-shadow: 0 #{$btn-shadow-size} 0 var(--#{$prefix}btn-border);
   font-size: #{$btn-text-size};
   font-weight: #{$btn-text-weight};
-  border: solid 2px #{$btn-border-color};
+  border: solid 2px var(--#{$prefix}btn-border);
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   margin-bottom: 0.6em;
@@ -14,14 +16,14 @@
     transform: translateY(
       calc(#{$btn-shadow-size} - #{$btn-shadow-hover-size})
     );
-    box-shadow: 0 #{$btn-shadow-hover-size} 0 #{$btn-border-color};
+    box-shadow: 0 #{$btn-shadow-hover-size} 0 var(--#{$prefix}btn-border);
     color: #{$text-color};
   }
   &:active {
     transform: translateY(
       calc(#{$btn-shadow-size} - #{$btn-shadow-active-size})
     );
-    box-shadow: 0 #{$btn-shadow-active-size} 0 #{$btn-border-color};
+    box-shadow: 0 #{$btn-shadow-active-size} 0 var(--#{$prefix}btn-border);
   }
   &:focus {
     outline: none;
@@ -32,10 +34,10 @@
     transform: translateY(
       calc(#{$btn-shadow-size} - #{$btn-shadow-active-size})
     );
-    box-shadow: 0 #{$btn-shadow-active-size} 0 #{$btn-border-color};
+    box-shadow: 0 #{$btn-shadow-active-size} 0 var(--#{$prefix}btn-border);
   }
   &.accent {
-    #{$btn-border-color}: #{darken($default-color, 15%)};
+    --#{$prefix}btn-border: #{darken($default-color, 15%)};
   }
   &.flat {
     box-shadow: none;
@@ -71,7 +73,7 @@
     }
     &.accent.#{$name} {
       /* get color equivalent from $shadow as border color */
-      #{$btn-border-color}: #{map-get($shadows, $name)};
+      --#{$prefix}btn-border: #{map-get($shadows, $name)};
     }
   }
 }

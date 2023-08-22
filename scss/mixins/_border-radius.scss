@@ -1,0 +1,15 @@
+@function validate-radius($radius) {
+    $return: ();
+    @each $value in $radius {
+      @if type-of($value) == number {
+        $return: append($return, max($value, 0));
+      } @else {
+        $return: append($return, $value);
+      }
+    }
+    @return $return;
+  }
+  
+  @mixin border-radius($radius) {
+    border-radius: validate-radius($radius) !important;
+  }
